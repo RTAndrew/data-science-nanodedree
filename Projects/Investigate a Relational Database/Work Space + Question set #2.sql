@@ -113,15 +113,15 @@ table3 AS (
 
 SELECT t1.*,
 		CASE 
-		WHEN t1.difference_in_payments = (
-			SELECT MAX(t1.difference_in_payments)
-			FROM (
-				SELECT table3.*, 
-						(table3.lead - table3.payment_amount) AS difference_in_payments
-				FROM table3
-			) t1
-		)
-		THEN 'maximum difference amount'
+			WHEN t1.difference_in_payments = (
+				SELECT MAX(t1.difference_in_payments)
+				FROM (
+					SELECT table3.*, 
+							(table3.lead - table3.payment_amount) AS difference_in_payments
+					FROM table3
+				) t1
+			)
+			THEN 'maximum difference amount'
 		END AS maximun_difference_amount
 FROM (
 	SELECT table3.*, 
