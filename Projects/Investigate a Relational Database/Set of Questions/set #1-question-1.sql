@@ -32,4 +32,4 @@ JOIN film_category
 JOIN category
 	ON category.category_id = film_category.category_id
 WHERE category.name IN ('Animation', 'Children', 'Classics', '', 'Comedy', 'Family ', 'Music')
-ORDER by 2, 1
+ORDER by 3, 1
