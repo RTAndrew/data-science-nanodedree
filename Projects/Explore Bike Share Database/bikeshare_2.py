@@ -19,7 +19,7 @@ now = datetime.datetime.now()
 # Function to return the difference of time in seconds, 
 # In various types of format such as day, hour, and minutes
 def get_time_diff(time_in_second):
-    diff_in_days    = divmod(time_in_second, 86400)        # Get days (without [0]!)
+    diff_in_days    = divmod(time_in_second, 86400)               # Get days (without [0]!)
     diff_in_hours   = divmod(diff_in_days[1], 3600)               # Use remainder of days to calc hours
     diff_in_minutes = divmod(diff_in_hours[1], 60)                # Use remainder of hours to calc minutes
     diff_in_seconds = divmod(diff_in_minutes[1], 1)               # Use remainder of minutes to calc seconds
@@ -50,12 +50,10 @@ def get_filters():
         city = city.lower()
 
     
-    
     # TO DO: get user input for month (all, january, february, ... , june)
     print('Which month would you like to filter (All or Jan, Feb, Mar, Apr, May, Jun)? ')
     month = input()
     month = month.lower()
-    
     
     
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
