@@ -20,7 +20,25 @@ Each part of the program required a project:
     - [ ] Project submission
 
 ## Project 1 - SQL
+
+### Overview
 This project was based on a generic company named Sakilla DVD Rentals, in which the student was tasked to run SQL queries on the company's database in order to answer business questions. 
 
 To answers needed to be in a graph visualization along with its description. There were in total 4 presentation slides, each one containing one answer to a particulary area of the business.
+
+## Project 2 - Python
+
+### Overview
+This project the student was provided with 3 different dataset. 
+The mission was to read them using python language, and provide interactive analytical presentation based on the user's input.
+
+#### Files used
+In order to complete the project, 3 dataset were used:
+ 
+* washington.csv
+* new_york_city.csv
+* chicago.csv
+
+#### Requirements
+Forgot the requirements, as my PC died and I also used mostly Udacity's virtual console. xD
 
