@@ -81,7 +81,7 @@ def load_data(city, month, day):
     for city_key, city_value in CITY_DATA.items():
         if city_key == city:
             df = pd.read_csv(city_value)
-#             Filter dates
+            #Filter dates
             df['Start Time'] = pd.to_datetime(df['Start Time'])
             df['month'] = df['Start Time'].dt.month
             df['day_of_week'] = df['Start Time'].dt.weekday_name
@@ -166,15 +166,15 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
-#     # convert the Start Time and End Time column to datetime
+    # convert the Start Time and End Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
     time_diff_in_seconds = df['End Time'] - df['Start Time']
     
-#     Convert the difference to seconds
+    #Convert the difference to seconds
     df['Total Time'] = time_diff_in_seconds.dt.seconds
     
-#     Calculate the sum of total time of all rows
+    #Calculate the sum of total time of all rows
     total_travel_time = df['Total Time'].sum()
     
     print('\n The total travel time is: ')
