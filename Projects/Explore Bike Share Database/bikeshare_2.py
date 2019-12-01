@@ -19,7 +19,7 @@ now = datetime.datetime.now()
 # Function to return the difference of time in seconds, 
 # In various types of format such as day, hour, and minutes
 def get_time_diff(time_in_second):
-    diff_in_days    = divmod(time_in_second, 86400)        # Get days (without [0]!)
+    diff_in_days    = divmod(time_in_second, 86400)               # Get days (without [0]!)
     diff_in_hours   = divmod(diff_in_days[1], 3600)               # Use remainder of days to calc hours
     diff_in_minutes = divmod(diff_in_hours[1], 60)                # Use remainder of hours to calc minutes
     diff_in_seconds = divmod(diff_in_minutes[1], 1)               # Use remainder of minutes to calc seconds
@@ -50,12 +50,10 @@ def get_filters():
         city = city.lower()
 
     
-    
     # TO DO: get user input for month (all, january, february, ... , june)
     print('Which month would you like to filter (All or Jan, Feb, Mar, Apr, May, Jun)? ')
     month = input()
     month = month.lower()
-    
     
     
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -83,7 +81,7 @@ def load_data(city, month, day):
     for city_key, city_value in CITY_DATA.items():
         if city_key == city:
             df = pd.read_csv(city_value)
-#             Filter dates
+            #Filter dates
             df['Start Time'] = pd.to_datetime(df['Start Time'])
             df['month'] = df['Start Time'].dt.month
             df['day_of_week'] = df['Start Time'].dt.weekday_name
@@ -168,15 +166,15 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
-#     # convert the Start Time and End Time column to datetime
+    # convert the Start Time and End Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
     time_diff_in_seconds = df['End Time'] - df['Start Time']
     
-#     Convert the difference to seconds
+    #Convert the difference to seconds
     df['Total Time'] = time_diff_in_seconds.dt.seconds
     
-#     Calculate the sum of total time of all rows
+    #Calculate the sum of total time of all rows
     total_travel_time = df['Total Time'].sum()
     
     print('\n The total travel time is: ')
