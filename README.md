@@ -1,5 +1,7 @@
+<p align="center"> <img src="https://res.cloudinary.com/db9ha9ox6/image/upload/v1575424031/misc/Udacity_s_Programming_for_Data_Science_Nanodegree.png"> </p> 
 
 ## <p align="center"> Udacity's Programming for Data Science Nanodegree </p>
+#### [Confirm certificate validation](https://confirm.udacity.com/U7MUGGJP)
 
 ### Date created
 First created on October 15th, 2019. Modified December 12th, 2019 based on Udacity's 3rd project [repository](https://github.com/udacity/pdsnd_github/blob/master/README.md)
